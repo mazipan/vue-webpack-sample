@@ -1,13 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png" style="height: 50px;">
+
+    <div>
+      <a target="_blank" href="https://github.com/mazipan/vue-webpack-sample">
+        See Source Code Github
+      </a>
+    </div>
+
     <router-view/>
+    <LinkTutorial/>
   </div>
 </template>
 
 <script>
+import LinkTutorial from 'components/LinkTutorial'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: { LinkTutorial }
 }
 </script>
 

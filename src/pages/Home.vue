@@ -1,12 +1,15 @@
 <template>
-  <div class="about">
-    <h1>Hello, I am About page !</h1>
+  <div class="home">
+    <h1>Hello, I am Home page !</h1>
+
+    <LinkTutorial/>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'about',
+  name: 'home',
   data () {
     return {
 
@@ -16,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.about{
+.home{
   ul{
     padding: 0;
     margin: 0;
