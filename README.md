@@ -2,6 +2,10 @@
 
 > Sample initialize Vue.js project using Vue-CLI webpack template
 
+## Slide Presentation
+
+https://speakerdeck.com/mazipan/advance-web-programming-with-vuejs
+
 ## Build Setup
 
 ``` bash
