@@ -6,12 +6,15 @@
 
     <input type="text" v-model="dataParent" placeholder="Type text to see data changes"/>
 
-    <ChildComponent :some-props="dataParent" @someEvent="someMethod"></ChildComponent>
+    <ChildComponent
+        :someProps="dataParent"
+        @clickMe="someMethod">
+    </ChildComponent>
   </div>
 </template>
 
 <script>
-import ChildComponent from 'components/ChildComponent'
+import ChildComponent from '@/components/ChildComponent'
 
 export default {
   name: 'data-binding',
@@ -23,7 +26,7 @@ export default {
   },
   methods: {
     someMethod (param) {
-      alert(`Hey you call parent method with param: ${param}`)
+      alert(`${param}`)
     }
   }
 }

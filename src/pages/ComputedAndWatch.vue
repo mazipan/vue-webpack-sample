@@ -1,9 +1,10 @@
 <template>
   <div class="computed-and-watch">
     <h1>Lets learn about Computed And Watch</h1>
-
-
-    <input type="text" v-model="dataA" placeholder="Type text to see data changes"/>
+    <input
+      type="text"
+      v-model="dataA"
+      placeholder="Type text to see data changes"/>
 
     <div>dataA : {{ dataA }}</div>
     <div>dataB : {{ dataB }}</div>

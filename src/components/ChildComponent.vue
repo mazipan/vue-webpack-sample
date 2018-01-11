@@ -3,27 +3,25 @@
     <h1>Hey I am Child Component</h1>
     {{ someProps }}
 
-    <button @click="clickMe">Click Me to Fired Parent Method</button>
+    <button
+      @click="handleClick">
+      Click Me to Fired Parent Method
+    </button>
   </div>
 </template>
 
 <script>
 export default {
   name: 'child-component',
-  props: {
-    someProps: {
-      type: String,
-      default: ''
-    }
-  },
+  props: ['someProps'],
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   },
   methods: {
-    clickMe () {
-      this.$emit('someEvent', 'I pass param ya !!!')
+    handleClick () {
+      this.$emit('clickMe', 'I pass param ya !!!')
     }
   }
 }

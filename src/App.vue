@@ -9,12 +9,13 @@
     </div>
 
     <router-view/>
-    <LinkTutorial/>
+
+    <link-tutorial></link-tutorial>
   </div>
 </template>
 
 <script>
-import LinkTutorial from 'components/LinkTutorial'
+import LinkTutorial from '@/components/LinkTutorial'
 
 export default {
   name: 'app',
