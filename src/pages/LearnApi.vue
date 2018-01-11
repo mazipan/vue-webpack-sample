@@ -2,13 +2,24 @@
   <div>
     <h1>Hey let's learn API</h1>
 
+    <h3>List of Studio Ghibli's films</h3>
     <ul class="films">
       <li v-for="(film, index) in films" :key="film.id">
-        {{index+1}} {{ film.title }} ({{ film.release_date }})
+
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              {{ film.title }} ({{ film.release_date }})
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              {{ film.description }}
+            </div>
+          </div>
+        </div>
       </li>
     </ul>
-
-    <button @click="callApi">CALL API</button>
 
   </div>
 </template>
@@ -27,6 +38,9 @@
         'films'
       ])
     },
+    mounted () {
+      this.callApi()
+    },
     methods: {
       callApi () {
         this.$store.dispatch('getFilms')
@@ -41,6 +55,10 @@
 
   li {
     padding: 1em;
+  }
+
+  .content{
+    text-align: left;
   }
 }
 </style>
