@@ -7,7 +7,8 @@ import About from '@/pages/About'
 import DataBinding from '@/pages/DataBinding'
 import ComputedAndWatch from '@/pages/ComputedAndWatch'
 import PropsAndEvents from '@/pages/PropsAndEvents'
-import LearnApi from '@/pages/LearnApi'
+import LearnApiVuex from '@/pages/LearnApiVuex'
+import LearnApiNoVuex from '@/pages/LearnApiNoVuex'
 import LearnVuex from '@/pages/LearnVuex'
 
 Vue.use(Router)
@@ -41,9 +42,14 @@ export default new Router({
       component: PropsAndEvents
     },
     {
-      path: '/learn-api',
-      name: 'LearnApi',
-      component: LearnApi
+      path: '/learn-api-vuex',
+      name: 'LearnApiVuex',
+      component: LearnApiVuex
+    },
+    {
+      path: '/learn-api-no-vuex',
+      name: 'LearnApiNoVuex',
+      component: LearnApiNoVuex
     },
     {
       path: '/learn-vuex',

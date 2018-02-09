@@ -4,7 +4,7 @@
 
     <h3>List of Studio Ghibli's films</h3>
     <ul class="films">
-      <li v-for="(film, index) in films" :key="film.id">
+      <li v-for="film in films" :key="film.id">
 
         <div class="card">
           <header class="card-header">
@@ -25,25 +25,28 @@
 </template>
 
 <script>
-  import { mapGetters } from 'vuex'
+  import axios from 'axios'
+  const URL = 'https://ghibliapi.herokuapp.com/films'
 
   export default {
     name: 'LearnApi',
     data () {
       return {
+        films: []
       }
-    },
-    computed: {
-      ...mapGetters([
-        'films'
-      ])
     },
     mounted () {
       this.callApi()
     },
     methods: {
       callApi () {
-        this.$store.dispatch('getFilms')
+        axios.get(URL)
+        .then(response => {
+          thi.films = response.data
+        })
+        .catch(error => {
+          console.log(error)
+        })
       }
     }
   }
