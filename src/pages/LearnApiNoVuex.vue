@@ -25,31 +25,31 @@
 </template>
 
 <script>
-  import axios from 'axios'
-  const URL = 'https://ghibliapi.herokuapp.com/films'
+import axios from 'axios'
+const URL = 'https://ghibliapi.herokuapp.com/films'
 
-  export default {
-    name: 'LearnApi',
-    data () {
-      return {
-        films: []
-      }
-    },
-    mounted () {
-      this.callApi()
-    },
-    methods: {
-      callApi () {
-        axios.get(URL)
+export default {
+  name: 'LearnApi',
+  data () {
+    return {
+      films: []
+    }
+  },
+  mounted () {
+    this.callApi()
+  },
+  methods: {
+    callApi () {
+      axios.get(URL)
         .then(response => {
-          thi.films = response.data
+          this.films = response.data
         })
         .catch(error => {
           console.log(error)
         })
-      }
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
