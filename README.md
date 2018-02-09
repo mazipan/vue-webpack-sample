@@ -6,6 +6,10 @@
 
 https://speakerdeck.com/mazipan/advance-web-programming-with-vuejs
 
+## Demo Page
+
+https://mazipan.github.io/vue-webpack-sample/#/
+
 ## Build Setup
 
 ``` bash
